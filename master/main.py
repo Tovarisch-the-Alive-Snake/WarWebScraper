@@ -1,6 +1,7 @@
 import requests
+from bs4 import BeautifulSoup
 
-URL = 'https://en.wikipedia.org/wiki/List_of_conflicts_in_Europe'
+URL = 'https://en.wikipedia.org/wiki/HTML'
 page = requests.get(URL)
 
-print(page)
+soup = BeautifulSoup(page.content, 'html.parser')
